@@ -52,6 +52,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 ```
 
+### Web request 
+* initializer 
+> let baseURl = "http://localhost:6069/img/"
 
-
+* collectionview cell initilizer
+```swift
+ func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+      
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PersonCell", forIndexPath: indexPath) as! PersonCell
+        
+        let url = "\(baseURl)\(missingPeople[indexPath.row])"
+        cell.configure(url)
+        return cell
+    }
+```
 

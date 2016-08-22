@@ -39,6 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 ```
 
 
+* add imagePickerController func 
 ```swift
  func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         

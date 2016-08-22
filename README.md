@@ -25,6 +25,14 @@
 
 ### add imagePicker 
 
+* initializer 
+```swift
+let imagePicker = UIImagePickerController()
+ override func viewDidLoad() {
+        imagePicker.delegate = self
+}
+```
+
 * viewController add  UIImagePickerControllerDelegate, UINavigationControllerDelegate 
 ```swift
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UIImagePickerControllerDelegate, UINavigationControllerDelegate

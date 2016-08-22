@@ -23,3 +23,26 @@
     }
 ```
 
+### add imagePicker 
+
+* viewController add  UIImagePickerControllerDelegate, UINavigationControllerDelegate 
+```swift
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UIImagePickerControllerDelegate, UINavigationControllerDelegate
+```
+
+
+```swift
+ func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            selectImg.image = pickedImage
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+```
+
+
+
+
